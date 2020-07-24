@@ -1,12 +1,40 @@
 <template>
   <div id="app">
-    <div id="nav">
+    <!-- <div id="nav">
       <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
+      <router-link to="/about">About</router-link> |
+      <router-link to="/searchbar">Searchbar</router-link>
+    </div> -->
+    <Searchbar />
+    <WelcomeMessage />
+    <NavBar />
+    <Body />
+    <Right />
+    <List />
+    <ProfilePic />
     <router-view />
   </div>
 </template>
+<script>
+import Searchbar from "@/views/Searchbar";
+import WelcomeMessage from "@/views/WelcomeMessage";
+import NavBar from "@/views/NavBar";
+import Body from "@/components/Body.vue";
+import Right from "@/views/Right";
+import List from "@/components/List.vue";
+import ProfilePic from "@/views/ProfilePic";
+export default {
+  components: {
+    Searchbar,
+    WelcomeMessage,
+    NavBar,
+    List,
+    Right,
+    Body,
+    ProfilePic
+  }
+};
+</script>
 
 <style>
 #app {
